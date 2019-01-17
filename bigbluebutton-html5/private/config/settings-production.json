@@ -108,7 +108,8 @@
           "captions",
           "breakouts",
           "voiceUsers",
-          "whiteboard-multi-user"
+          "whiteboard-multi-user",
+          "timers"
         ],
         "methods": [
           "listenOnlyToggle",
