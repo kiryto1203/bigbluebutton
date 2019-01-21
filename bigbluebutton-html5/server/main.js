@@ -15,7 +15,8 @@ import '/imports/api/screenshare/server';
 import '/imports/api/voice-users/server';
 import '/imports/api/whiteboard-multi-user/server';
 import '/imports/api/video/server';
-
+// Custom API
+import '/imports/api/timer/server';
 // Commons
 import '/imports/api/log-client/server';
 import '/imports/api/common/server/helpers';

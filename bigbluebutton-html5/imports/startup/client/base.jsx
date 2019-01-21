@@ -114,6 +114,7 @@ Base.defaultProps = defaultProps;
 const SUBSCRIPTIONS_NAME = [
   'users', 'chat', 'meetings', 'polls', 'presentations',
   'slides', 'captions', 'breakouts', 'voiceUsers', 'whiteboard-multi-user', 'screenshare',
+  'timers' // custom subscription name (https://docs.meteor.com/api/pubsub.html#Meteor-subscribe)
 ];
 
 const BaseContainer = withRouter(withTracker(({ params, router }) => {
