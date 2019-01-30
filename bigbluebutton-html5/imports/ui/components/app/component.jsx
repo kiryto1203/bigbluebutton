@@ -12,6 +12,7 @@ import NotificationsBarContainer from '../notifications-bar/container';
 import AudioContainer from '../audio/container';
 import ChatAlertContainer from '../chat/alert/container';
 import { styles } from './styles';
+import SettingsSingleton from '../../services/settings';
 
 const MOBILE_MEDIA = 'only screen and (max-width: 40em)';
 const USERLIST_COMPACT_WIDTH = 50;
@@ -159,7 +160,7 @@ class App extends Component {
         aria-hidden={chatIsOpen}
       >
         {userList}
-        {this.renderTimer()}
+        {Meteor.settings.public.timer.enable ? this.renderTimer() : ''}
       </div>
     );
   }
@@ -169,10 +170,10 @@ class App extends Component {
     if (!timer) return null;
     timer = React.cloneElement(timer);
     return (
-        <div >
-          {timer}
-        </div>
-    )
+      <div >
+        {timer}
+      </div>
+    );
   }
 
   renderUserListResizable() {

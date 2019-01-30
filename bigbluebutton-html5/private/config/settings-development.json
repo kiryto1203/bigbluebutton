@@ -4,11 +4,11 @@
     "app": {
       "mobileFont": 16,
       "desktopFont": 14,
-      "audioChatNotification": false,
+      "audioChatNotification": true,
       "autoJoin": true,
       "listenOnlyMode": true,
-      "forceListenOnly": false,
-      "skipCheck": false,
+      "forceListenOnly": true,
+      "skipCheck": true,
       "clientTitle": "VCR TOPICA NATIVE",
       "appName": "VCR CLIENT",
       "bbbServerVersion": "2.0-rc",
@@ -17,9 +17,10 @@
       "lockOnJoin": true,
       "basename": "/html5client",
       "askForFeedbackOnLogout": false,
+      "helpLink": "https://google.com",
       "defaultSettings": {
         "application": {
-          "chatAudioAlerts": false,
+          "chatAudioAlerts": true,
           "chatPushAlerts": false,
           "fontSize": "16px",
           "fallbackLocale": "en"
@@ -41,12 +42,12 @@
           "takeOwnership": false
         },
         "participants": {
-          "muteAll": false,
-          "lockAll": false,
-          "microphone": false,
-          "publicChat": false,
-          "privateChat": false,
-          "layout": false
+          "muteAll": true,
+          "lockAll": true,
+          "microphone": true,
+          "publicChat": true,
+          "privateChat": true,
+          "layout": true
         }
       },
       "shortcuts": {
@@ -62,13 +63,13 @@
         "openStatus": {"accesskey": "S", "descId": "openStatus"}
       },
       "branding": {
-        "displayBrandingArea": false
+        "displayBrandingArea": true
       },
-      "allowHTML5Moderator": true,
+      "allowHTML5Moderator": false,
       "allowModeratorToUnmuteAudio": true,
       "httpsConnection": true,
       "connectionTimeout": 60000,
-      "showHelpButton": true
+      "showHelpButton": false
     },
 
     "kurento": {
@@ -356,11 +357,12 @@
     },
     "clientLog": {
       "server": { "enabled": true, "level": "info" },
-      "console": { "enabled": false, "level": "debug" },
+      "console": { "enabled": true, "level": "debug" },
       "external": { "enabled": false, "level": "info", "url": "https://LOG_HOST/html5Log", "method": "POST" }
     },
 
     "timer": {
+      "enable": false,
       "units": [
         { "unit": "second", "min": 0, "max": 59 },
         { "unit": "minute", "min": 0, "max": -1 }
@@ -380,7 +382,7 @@
       "host": "127.0.0.1",
       "post": "6379",
       "timeout": 5000,
-      "debug": true,
+      "debug": false,
       "channels": {
         "toAkkaApps": "to-akka-apps-redis-channel",
         "myApps": "to-my-apps-redis-channel"

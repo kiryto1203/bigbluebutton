@@ -1,5 +1,5 @@
 import '/imports/startup/server';
-
+import '/imports/startup/server/api';
 // 2x
 import '/imports/api/meetings/server';
 import '/imports/api/users/server';
